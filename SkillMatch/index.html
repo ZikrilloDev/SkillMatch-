@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillMatch — 30 ta savol orqali qobiliyatlaringizni aniqlang va sizga mos TOP-5 kasbni bilib oling.">
+    <meta name="keywords" content="kasb, test, qabiliyat, o'zbek, kasbiy yo'nalish">
+    <meta name="theme-color" content="#6C63FF">
+    <meta property="og:title" content="SkillMatch — O'zingizga mos kasbni toping">
+    <meta property="og:description" content="30 ta savol orqali qobiliyatlaringizni aniqlang va sizga mos TOP-5 kasbni bilib oling.">
+    <meta property="og:type" content="website">
+    <title>SkillMatch — O'zingizga mos kasbni toping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7V12C2 18.6 7.4 24 12 24C16.6 24 22 18.6 22 12V7L12 2Z"></path>
+                        <path d="M12 12L10 16L14 16L12 12Z"></path>
+                    </svg>
+                    <span>SkillMatch</span>
+                </div>
+                <nav class="nav desktop-nav">
+                    <a href="index.html" class="nav-link active">Bosh sahifa</a>
+                    <a href="test.html" class="nav-link">Test</a>
+                    <a href="#how-it-works" class="nav-link">Qanday ishlaydi?</a>
+                    <a href="#skills" class="nav-link">Qobiliyatlar</a>
+                </nav>
+                <button class="cta-btn">Testni boshlash</button>
+                <button class="menu-btn" id="menuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="nav mobile-nav" id="mobileNav">
+            <a href="index.html" class="nav-link active">Bosh sahifa</a>
+            <a href="test.html" class="nav-link">Test</a>
+            <a href="#how-it-works" class="nav-link">Qanday ishlaydi?</a>
+            <a href="#skills" class="nav-link">Qobiliyatlar</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">KASBIY YO'NALISH TESTI</span>
+                    <h1 class="hero-title">Kelajagingiz uchun mos kasbni bugun aniqlang</h1>
+                    <p class="hero-description">
+                        30 ta maxsus savol orqali qobiliyatlaringiz, qiziqishlaringiz va ishlash uslubingizni tahlil qiling. SkillMatch sizga eng mos TOP-5 kasbni aniqlashga yordam beradi.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="test.html" class="btn btn-primary">Testni boshlash</a>
+                        <button class="btn btn-secondary" onclick="document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' })">Qanday ishlaydi?</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="career-cards">
+                        <div class="card card-1">
+                            <span class="emoji">💻</span>
+                            <p>Developer</p>
+                        </div>
+                        <div class="card card-2">
+                            <span class="emoji">🎨</span>
+                            <p>Designer</p>
+                        </div>
+                        <div class="card card-3">
+                            <span class="emoji">📊</span>
+                            <p>Analyst</p>
+                        </div>
+                        <div class="card card-4">
+                            <span class="emoji">🧠</span>
+                            <p>Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO STATS -->
+    <section class="hero-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Savol</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60+</div>
+                    <div class="stat-label">Kasb</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Qobiliyat</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">TOP-5</div>
+                    <div class="stat-label">Natija</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Qanday ishlaydi?</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Savollarga javob bering</h3>
+                    <p>30 ta qisqa va o'z-o'zidan tushunuvchan savol. Shoshilmasdan o'zingizga eng to'g'ri javobni tanlang.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Qobiliyatlaringiz aniqlanadi</h3>
+                    <p>Javoblaringiz 8 ta yo'nalish bo'yicha tahlil qilinadi: analitik fikrlash, texnik qobiliyat, kreativlik va boshqalar.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Kasblar bilan solishtiriladi</h3>
+                    <p>Sizning profil 60+ kasb bilan matematik tarzda taqqoslanadi va eng mos keladiganlar aniqlanadi.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>TOP-5 natijani oling</h3>
+                    <p>Sizga eng mos kasblar foiz bilan ko'rsatiladi. Har biri uchun ta'rif, road map va kerakli skilllarni o'rganish imkoniyati.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title">8 Asosiy Qobiliyat</h2>
+            <p class="section-subtitle">SkillMatch algoritmi sizning qobiliyatlaringizni 8 ta muhim yo'nalish bo'yicha tahlil qiladi</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h3>Analitik fikrlash</h3>
+                    <p>Murakkab muammolarni qismlarga ajratib, mantiqiy yechim topish qobiliyati</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Texnik qobiliyat</h3>
+                    <p>Texnologiyalar, tizimlar va texnik vositalarni tushunish va ishlata bilish</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Kreativlik</h3>
+                    <p>Yangi g'oyalar o'ylab topish va noodatiy yechimlarni iloji boricha qidirish</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💬</div>
+                    <h3>Muloqot</h3>
+                    <p>Boshqalar bilan samarali suhbat, taqdimot va fikr almashish qobiliyati</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">👑</div>
+                    <h3>Liderlik</h3>
+                    <p>Jamoa yetakchi bo'lish va boshqalarni ilhomlantirish qobiliyati</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">❤️</div>
+                    <h3>Empatiya</h3>
+                    <p>Boshqalarning hissolari va ehtiyojlarini tushunish va ularni qo'llab-quvvatlash</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📋</div>
+                    <h3>Tashkilotchilik</h3>
+                    <p>Vaqt va resurslarni samarali boshqarish, rejalashtirish va tartib-tuzumni o'rnatish</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Amaliy qobiliyat</h3>
+                    <p>Nazariyani amaliyotga aylantirish va real natija olish qobiliyati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ruyingizni boshqarish vaqti keldi!</h2>
+                <p>SkillMatch bilan o'zingizga mos kasbiy yo'nalishni bugun bilib oling</p>
+                <a href="test.html" class="btn btn-primary btn-large">Testni boshlash — 5 daqiqa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SkillMatch</h4>
+                    <p>Qobiliyatingizni aniqlang. O'zingizga mos kasbni toping.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html">Bosh sahifa</a></li>
+                        <li><a href="test.html">Test</a></li>
+                        <li><a href="#how-it-works">Qanday ishlaydi?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Qonuniylik</h4>
+                    <ul>
+                        <li><a href="#">Maxfiylik</a></li>
+                        <li><a href="#">Shartlar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkillMatch. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        menuBtn.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // CTA button navigation
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                window.location.href = 'test.html';
+            });
+        });
+    </script>
+</body>
+</html>

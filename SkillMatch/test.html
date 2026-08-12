@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillMatch Test — 30 ta savol orqali qobiliyatlarini aniqlash testi">
+    <title>SkillMatch — Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7V12C2 18.6 7.4 24 12 24C16.6 24 22 18.6 22 12V7L12 2Z"></path>
+                        <path d="M12 12L10 16L14 16L12 12Z"></path>
+                    </svg>
+                    <span>SkillMatch</span>
+                </div>
+                <nav class="nav desktop-nav">
+                    <a href="index.html" class="nav-link">Bosh sahifa</a>
+                    <a href="test.html" class="nav-link active">Test</a>
+                    <a href="index.html#how-it-works" class="nav-link">Qanday ishlaydi?</a>
+                    <a href="index.html#skills" class="nav-link">Qobiliyatlar</a>
+                </nav>
+                <button class="menu-btn" id="menuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="nav mobile-nav" id="mobileNav">
+            <a href="index.html" class="nav-link">Bosh sahifa</a>
+            <a href="test.html" class="nav-link active">Test</a>
+            <a href="index.html#how-it-works" class="nav-link">Qanday ishlaydi?</a>
+            <a href="index.html#skills" class="nav-link">Qobiliyatlar</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="test-container">
+        <div class="container">
+            <div class="test-header">
+                <h1>SkillMatch testi</h1>
+                <p class="test-subtitle">Qobiliyatlaringizni aniqlash uchun quyidagi savollarga javob bering</p>
+            </div>
+
+            <!-- PROGRESS BAR -->
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span class="question-counter"><span id="currentQuestion">1</span> / 30</span>
+                    <span class="progress-percentage" id="progressPercentage">3%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- QUESTION SECTION -->
+            <div class="question-section">
+                <div class="question-card">
+                    <h2 id="questionText" class="question-text"></h2>
+                    <div class="options-container" id="optionsContainer"></div>
+                </div>
+            </div>
+
+            <!-- NAVIGATION BUTTONS -->
+            <div class="test-navigation">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()">← Oldingi</button>
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Keyingi →</button>
+            </div>
+
+            <!-- VALIDATION MESSAGE -->
+            <div class="validation-message" id="validationMessage">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span>Davom etish uchun javoblardan birini tanlang.</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SkillMatch</h4>
+                    <p>Qobiliyatingizni aniqlang. O'zingizga mos kasbni toping.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html">Bosh sahifa</a></li>
+                        <li><a href="test.html">Test</a></li>
+                        <li><a href="index.html#how-it-works">Qanday ishlaydi?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Qonuniylik</h4>
+                    <ul>
+                        <li><a href="#">Maxfiylik</a></li>
+                        <li><a href="#">Shartlar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkillMatch. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/questions.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>

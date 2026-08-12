@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillMatch — Sizning test natijalaringiz">
+    <title>SkillMatch — Test Natijasi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7V12C2 18.6 7.4 24 12 24C16.6 24 22 18.6 22 12V7L12 2Z"></path>
+                        <path d="M12 12L10 16L14 16L12 12Z"></path>
+                    </svg>
+                    <span>SkillMatch</span>
+                </div>
+                <nav class="nav desktop-nav">
+                    <a href="index.html" class="nav-link">Bosh sahifa</a>
+                    <a href="test.html" class="nav-link">Test</a>
+                    <a href="index.html#how-it-works" class="nav-link">Qanday ishlaydi?</a>
+                    <a href="index.html#skills" class="nav-link">Qobiliyatlar</a>
+                </nav>
+                <button class="menu-btn" id="menuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="nav mobile-nav" id="mobileNav">
+            <a href="index.html" class="nav-link">Bosh sahifa</a>
+            <a href="test.html" class="nav-link">Test</a>
+            <a href="index.html#how-it-works" class="nav-link">Qanday ishlaydi?</a>
+            <a href="index.html#skills" class="nav-link">Qobiliyatlar</a>
+        </nav>
+    </header>
+
+    <!-- EMPTY STATE (if no results) -->
+    <div class="empty-state" id="emptyState">
+        <div class="container">
+            <div class="empty-state-content">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 11L12 14L22 3"></path>
+                    <path d="M20 4H4C2.9 4 2 4.9 2 6V20C2 21.1 2.9 22 4 22H20C21.1 22 22 21.1 22 20V6C22 4.9 21.1 4 20 4Z"></path>
+                </svg>
+                <h2>Test natijalaringiz mavjud emas</h2>
+                <p>Avval testni yakunlashingiz kerak</p>
+                <a href="test.html" class="btn btn-primary">Testni boshlash</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESULTS CONTENT -->
+    <main class="results-container" id="resultsContent" style="display: none;">
+        <div class="container">
+            <!-- HEADER -->
+            <div class="results-header">
+                <span class="badge">TEST YAKUNLANDI</span>
+                <h1>Sizning SkillMatch natijangiz</h1>
+                <p>Javoblaringiz asosida sizga eng mos kasbiy yo'nalishlarni aniqladik.</p>
+            </div>
+
+            <!-- TOP-1 RESULT -->
+            <div class="top-result">
+                <div class="top-result-badge">🥇 ENG MOS KASB</div>
+                <div class="top-result-content">
+                    <div class="top-result-icon" id="topIcon"></div>
+                    <h2 id="topTitle"></h2>
+                    <div class="match-percentage">
+                        <div class="percentage-circle" id="percentageCircle"></div>
+                        <span id="topPercentage"></span>
+                    </div>
+                    <p class="top-description" id="topDescription"></p>
+                    <button class="btn btn-secondary" onclick="openCareerModal(0)">Batafsil ko'rish</button>
+                </div>
+            </div>
+
+            <!-- TOP-5 RESULTS -->
+            <div class="top-results-section">
+                <h2 class="section-title">TOP-5 Natijalar</h2>
+                <div class="careers-grid" id="careersGrid"></div>
+            </div>
+
+            <!-- SKILLS CHART -->
+            <div class="skills-chart-section">
+                <h2 class="section-title">Sizning Qobiliyatlar Profili</h2>
+                <div class="skills-chart" id="skillsChart"></div>
+            </div>
+
+            <!-- STRENGTHS -->
+            <div class="strengths-section">
+                <h2 class="section-title">Sizning Kuchli Tomonlaringiz</h2>
+                <div class="strengths-grid" id="strengthsGrid"></div>
+            </div>
+
+            <!-- AREAS FOR DEVELOPMENT -->
+            <div class="development-section">
+                <h2 class="section-title">Rivojlantirish Mumkin Bo'lgan Tomonlar</h2>
+                <div class="development-grid" id="developmentGrid"></div>
+            </div>
+
+            <!-- ACTION BUTTONS -->
+            <div class="action-buttons">
+                <button class="btn btn-secondary" onclick="retakeTest()">Testni qayta ishlash</button>
+                <button class="btn btn-primary" onclick="shareResults()">Natijani ulashish</button>
+            </div>
+
+            <!-- DISCLAIMER -->
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> SkillMatch natijalari sizga yo'nalish tanlashda yordam beruvchi tavsiya hisoblanadi. Yakuniy kasb tanlovi sizning qiziqishlaringiz, imkoniyatlaringiz, tajribangiz va maqsadlaringizga bog'liq.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- CAREER MODAL -->
+    <div class="modal" id="careerModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCareerModal()">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SkillMatch</h4>
+                    <p>Qobiliyatingizni aniqlang. O'zingizga mos kasbni toping.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html">Bosh sahifa</a></li>
+                        <li><a href="test.html">Test</a></li>
+                        <li><a href="index.html#how-it-works">Qanday ishlaydi?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Qonuniylik</h4>
+                    <ul>
+                        <li><a href="#">Maxfiylik</a></li>
+                        <li><a href="#">Shartlar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkillMatch. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/careers.js"></script>
+    <script src="js/result.js"></script>
+</body>
+</html>
